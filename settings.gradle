@@ -1,4 +1,4 @@
-rootProject.name = 'TCC_Advocacia'
+rootProject.name = 'TestesUnitarios'
 include 'api'
 include 'domain'
 

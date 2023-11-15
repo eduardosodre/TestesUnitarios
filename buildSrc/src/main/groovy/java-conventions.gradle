@@ -1,0 +1,36 @@
+plugins {
+    id 'java'
+    id 'jacoco'
+}
+
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-log4j2:3.1.4'
+
+    runtimeOnly 'com.vlkan.log4j2:log4j2-logstash-layout:1.0.2'
+
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+    testImplementation('org.springframework.boot:spring-boot-starter-test:3.1.4') {
+        exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+    }
+
+    //Lombok
+    compileOnly 'org.projectlombok:lombok:1.18.30'
+    annotationProcessor 'org.projectlombok:lombok:1.18.30'
+    testCompileOnly 'org.projectlombok:lombok:1.18.30'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.30'
+}
+
+jacoco {
+    toolVersion = "0.8.8"
+}
+
+tasks.named("test") {
+    useJUnitPlatform()
+}
