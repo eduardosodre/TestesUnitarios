@@ -1,4 +1,4 @@
-package br.com.project.domain;
+package br.com.project.api;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
