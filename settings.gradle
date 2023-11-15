@@ -1,0 +1,4 @@
+rootProject.name = 'TCC_Advocacia'
+include 'api'
+include 'domain'
+
